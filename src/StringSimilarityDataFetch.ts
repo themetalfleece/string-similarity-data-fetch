@@ -48,6 +48,10 @@ export class StringSimilarityDataFetch {
         searchString: string,
     ): Promise<(IKeyDataAttributesNoGroup & { similarity: number }) | null> {
         const allKeys = this.data.map(({ key }) => key);
+        if (!allKeys.length) {
+            throw new Error('no entries match this group');
+        }
+
         const bestMatchResult = stringSimilarity.findBestMatch(
             searchString.toLowerCase(),
             allKeys,

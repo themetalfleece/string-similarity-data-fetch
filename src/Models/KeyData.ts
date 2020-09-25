@@ -32,10 +32,19 @@ const KeyDataSchema: Schema = new Schema(
         },
         data: {
             type: [
-                {
-                    name: mongoose.SchemaTypes.String,
-                    value: mongoose.SchemaTypes.String,
-                },
+                new Schema(
+                    {
+                        name: {
+                            type: mongoose.SchemaTypes.String,
+                            required: true,
+                        },
+                        value: {
+                            type: mongoose.SchemaTypes.String,
+                            required: true,
+                        },
+                    },
+                    { _id: false },
+                ),
             ],
             required: true,
         },

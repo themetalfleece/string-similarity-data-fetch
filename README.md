@@ -1,10 +1,17 @@
 A web server which returns data associated with a key based on its similarity with a given string, by querying a MongoDB database
 
+## Associated projects:
+
+[Twitch interface](https://github.com/themetalfleece/twitch-string-similarity-data-fetch)
+
+[Data populator](https://github.com/themetalfleece/string-similarity-populator)
+
 ## Install
 
-1. Install [node.js](https://nodejs.org/en/download/), [yarn](https://classic.yarnpkg.com/en/docs/install/).
-2. Clone this repository, and using a terminal navigate to its directory.
-3. Run `yarn` to install the dependencies.
+1. Install [node.js](https://nodejs.org/en/download/), [yarn](https://classic.yarnpkg.com/en/docs/install/), [mongodb](https://www.mongodb.com/try/download/community).
+2. Configure `mongodb` so its server is running.
+3. Clone this repository, and using a terminal navigate to its directory.
+4. Run `yarn` to install the dependencies.
 
 ## Build & Run
 

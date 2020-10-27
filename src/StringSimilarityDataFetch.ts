@@ -12,8 +12,10 @@ export class StringSimilarityDataFetch {
     ) {}
 
     /** removes the data from the database */
-    public async clearData(): Promise<void> {
-        await KeyData.deleteMany({});
+    public async clearData(group: string): Promise<void> {
+        await KeyData.deleteMany({
+            group,
+        });
         this.data = [];
     }
 

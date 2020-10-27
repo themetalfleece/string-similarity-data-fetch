@@ -106,7 +106,7 @@ export const registerRootRoute = (): void => {
 
         const searchSimilarity = await getLoadedStringSimilarity(group);
 
-        await searchSimilarity.clearData();
+        await searchSimilarity.clearData(group);
 
         ctx.status = 204;
 

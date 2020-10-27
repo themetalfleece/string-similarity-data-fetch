@@ -28,7 +28,6 @@ const KeyDataSchema: Schema = new Schema(
             required: true,
             minlength: 1,
             trim: true,
-            unique: true,
         },
         data: {
             type: [
@@ -57,6 +56,14 @@ const KeyDataSchema: Schema = new Schema(
         },
     },
     { collection: 'keydata' },
+);
+
+KeyDataSchema.index(
+    {
+        key: 1,
+        group: 1,
+    },
+    { unique: true },
 );
 
 export const KeyData = mongoose.model<IKeyData, IKeyDataModel>(
